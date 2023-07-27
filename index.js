@@ -2,14 +2,18 @@ console.log("This is my index js file");
 
 // Initialize the news api parameters
 let source = 'abc-news';
-let apiKey = '348e5ca7ce3c473f923efd8b629e49b2'
+let apiKey = '5a56e923552549e08d89f53f00d3023a'
 
 // Grab the news container
 let newsAccordion = document.getElementById('newsAccordion');
 
 // Create an ajax get request
 const xhr = new XMLHttpRequest();
-xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`, true);
+xhr.open('GET', `'https://newsapi.org/v2/everything?' +
+          'q=Apple&' +
+          'from=2023-07-27&' +
+          'sortBy=popularity&' +
+          'apiKey=5a56e923552549e08d89f53f00d3023a');
 
 // What to do when response is ready
 xhr.onload = function () {
