@@ -9,11 +9,8 @@ let newsAccordion = document.getElementById('newsAccordion');
 
 // Create an ajax get request
 const xhr = new XMLHttpRequest();
-xhr.open('GET', `'https://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2023-07-27&' +
-          'sortBy=popularity&' +
-          'apiKey=5a56e923552549e08d89f53f00d3023a');
+xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`, true);
+
 
 // What to do when response is ready
 xhr.onload = function () {
