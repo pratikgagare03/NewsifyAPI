@@ -9,8 +9,9 @@ let newsAccordion = document.getElementById('newsAccordion');
 
 // Create an ajax get request
 const xhr = new XMLHttpRequest();
-xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`, true);
-
+xhr.open('GET', 'https://newsapi.org/v2/top-headlines?' +
+'country=us&' +
+'apiKey=5a56e923552549e08d89f53f00d3023a', true);
 
 // What to do when response is ready
 xhr.onload = function () {
